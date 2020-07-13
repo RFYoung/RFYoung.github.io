@@ -27,9 +27,11 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: default
 github_username:  RFYoung
+leetcode_username: yang_yusen
 
 # Build settings
-theme: minima
+
+# theme: minima
 plugins:
   - jekyll-feed
 
