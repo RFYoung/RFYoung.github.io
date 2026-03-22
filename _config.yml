@@ -19,15 +19,30 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Yusen Yang's Blog
+author: Yusen Yang
 email: yangyusen123456@163.com
-description: >- # this means to ignore newlines until "baseurl:"
-  The purpose of this blog site is to share what I have learned recently from my homework and elsewhere.
-  Please contact me if you have any suggestion.
+description: >-
+  Personal academic blog sharing insights on research, coursework, and algorithms.
+
+# Bio section (shown on the home page hero)
+bio_title: "Researcher & Developer"
+bio_description: >-
+  Welcome! I am passionate about computer science, algorithms, and data structures.
+  This blog shares what I have learned from research and coursework.
+  Feel free to reach out if you have questions or suggestions.
+
+# avatar: "/assets/images/avatar.jpg"  # Uncomment and add your photo
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: default
 github_username:  RFYoung
 leetcode_username: yang_yusen
+# scholar_id: YOUR_GOOGLE_SCHOLAR_ID  # Uncomment and fill in
+# orcid_id: 0000-0000-0000-0000       # Uncomment and fill in
+# linkedin_username: your-linkedin     # Uncomment and fill in
+
+show_excerpts: true
 
 # Build settings
 
