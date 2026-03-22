@@ -8,9 +8,8 @@
     {%- include header.html -%}
 
     <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+      <div class="agent-flow-bg"></div>
+      {{ content }}
     </main>
 
     {%- include footer.html -%}
@@ -22,9 +21,14 @@
         if (!toggle) return;
         toggle.addEventListener('click', function() {
           var current = document.documentElement.getAttribute('data-theme');
-          var next = current === 'dark' ? 'light' : 'dark';
-          document.documentElement.setAttribute('data-theme', next);
-          localStorage.setItem('theme', next);
+          var next = current === 'light' ? null : 'light';
+          if (next) {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+            localStorage.removeItem('theme');
+          }
         });
       })();
     </script>

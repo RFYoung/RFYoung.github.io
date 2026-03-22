@@ -1,34 +1,100 @@
 @charset "utf-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+// Typography
+$font-headline: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+$font-body:     'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$font-label:    'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+$font-mono:     'JetBrains Mono', 'Fira Code', monospace;
 
-// Define defaults for each variable.
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.6;
 
-$base-font-family:  'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !default;
-$mono-font-family:  'JetBrains Mono', 'Fira Code', monospace !default;
-$base-font-size:   16px !default;
-$base-font-weight: 400 !default;
-$small-font-size:  $base-font-size * 0.875 !default;
-$base-line-height: 1.6 !default;
+$spacing-unit: 30px;
 
-$spacing-unit:     30px !default;
+// Layout
+$content-width: 1200px;
+$on-palm:       600px;
+$on-laptop:     900px;
 
-// Light theme colors (used as defaults in SCSS calculations)
-$text-color:       #1a1a2e !default;
-$background-color: #fafafa !default;
-$brand-color:      #4a6cf7 !default;
+// Design system color tokens (dark theme is default)
+:root {
+  // Surface hierarchy
+  --surface:                 #131316;
+  --surface-container-lowest: #0e0e11;
+  --surface-container-low:   #1b1b1e;
+  --surface-container:       #1f1f22;
+  --surface-container-high:  #2a2a2d;
+  --surface-container-highest: #353438;
+  --surface-bright:          #39393c;
 
-$grey-color:       #6b7280 !default;
-$grey-color-light: lighten($grey-color, 30%) !default;
-$grey-color-dark:  darken($grey-color, 20%) !default;
+  // Primary
+  --primary:                 #3cd7ff;
+  --primary-container:       #009ebe;
+  --on-primary:              #003642;
+  --on-primary-container:    #002e3a;
 
-$table-text-align: left !default;
+  // Text
+  --on-surface:              #e4e1e6;
+  --on-surface-variant:      #c1c6d7;
+  --on-background:           #e4e1e6;
 
-// Width of the content area
-$content-width:    900px !default;
+  // Tertiary
+  --tertiary:                #b6c4ff;
+  --tertiary-container:      #6889ff;
 
-$on-palm:          600px !default;
-$on-laptop:        900px !default;
+  // Outline
+  --outline:                 #8b90a0;
+  --outline-variant:         #414755;
+
+  // Misc
+  --inverse-surface:         #e4e1e6;
+  --inverse-on-surface:      #303033;
+  --error:                   #ffb4ab;
+
+  // Functional
+  --code-bg:                 #1e1e32;
+  --selection-bg:            #009ebe;
+  --selection-text:          #002e3a;
+  --transition-speed:        0.3s;
+  --streamline-rgb:          60, 215, 255;
+}
+
+[data-theme="light"] {
+  --surface:                 #fafafa;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low:   #f4f4f5;
+  --surface-container:       #ececee;
+  --surface-container-high:  #e4e4e6;
+  --surface-container-highest: #dcdcde;
+  --surface-bright:          #fafafa;
+
+  --primary:                 #006880;
+  --primary-container:       #b4ebff;
+  --on-primary:              #ffffff;
+  --on-primary-container:    #001f29;
+
+  --on-surface:              #1a1a2e;
+  --on-surface-variant:      #44474f;
+  --on-background:           #1a1a2e;
+
+  --tertiary:                #0039b3;
+  --tertiary-container:      #dce1ff;
+
+  --outline:                 #74777f;
+  --outline-variant:         #c4c6d0;
+
+  --inverse-surface:         #303033;
+  --inverse-on-surface:      #f2f0f4;
+
+  --code-bg:                 #f3f4f6;
+  --selection-bg:            #b4ebff;
+  --selection-text:          #001f29;
+  --streamline-rgb:          0, 104, 128;
+}
+
+$table-text-align: left;
 
 @mixin media-query($device) {
   @media screen and (max-width: $device) {
@@ -38,38 +104,6 @@ $on-laptop:        900px !default;
 
 @mixin relative-font-size($ratio) {
   font-size: $base-font-size * $ratio;
-}
-
-// CSS Custom Properties for theming
-:root {
-  --color-bg: #fafafa;
-  --color-bg-secondary: #ffffff;
-  --color-text: #1a1a2e;
-  --color-text-secondary: #6b7280;
-  --color-brand: #4a6cf7;
-  --color-brand-light: #6b8cff;
-  --color-border: #e5e7eb;
-  --color-code-bg: #f3f4f6;
-  --color-card-shadow: rgba(0, 0, 0, 0.06);
-  --color-hero-gradient-start: #fafafa;
-  --color-hero-gradient-end: #f0f2ff;
-  --streamline-color: 74, 108, 247;
-  --transition-speed: 0.3s;
-}
-
-[data-theme="dark"] {
-  --color-bg: #0f0f1a;
-  --color-bg-secondary: #1a1a2e;
-  --color-text: #e2e8f0;
-  --color-text-secondary: #94a3b8;
-  --color-brand: #6b8cff;
-  --color-brand-light: #8ba6ff;
-  --color-border: #2d2d44;
-  --color-code-bg: #1e1e32;
-  --color-card-shadow: rgba(0, 0, 0, 0.3);
-  --color-hero-gradient-start: #0f0f1a;
-  --color-hero-gradient-end: #161630;
-  --streamline-color: 107, 140, 255;
 }
 
 // Import partials.
