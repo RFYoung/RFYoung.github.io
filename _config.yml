@@ -25,10 +25,10 @@ description: >-
   Personal academic blog sharing insights on research, coursework, and algorithms.
 
 # Bio section (shown on the home page hero)
-bio_title: "Researcher & Developer"
+bio_title: "AI Engineer & Researcher"
 bio_description: >-
-  Welcome! I am passionate about computer science, algorithms, and data structures.
-  This blog shares what I have learned from research and coursework.
+  Welcome! I am an AI engineer with research background in reinforcement learning and multi-agent systems.
+  This blog shares insights from my work, research, and explorations in AI.
   Feel free to reach out if you have questions or suggestions.
 
 # avatar: "/assets/images/avatar.jpg"  # Uncomment and add your photo
@@ -40,7 +40,7 @@ github_username:  RFYoung
 leetcode_username: yang_yusen
 # scholar_id: YOUR_GOOGLE_SCHOLAR_ID  # Uncomment and fill in
 # orcid_id: 0000-0000-0000-0000       # Uncomment and fill in
-# linkedin_username: your-linkedin     # Uncomment and fill in
+linkedin_username: yusen-yang-a9617623a
 
 show_excerpts: true
 

@@ -1230,6 +1230,14 @@
   font-size: 0.9rem;
   color: var(--on-surface-variant);
   margin-bottom: 4px;
+
+  sup { color: var(--primary); font-weight: 700; }
+}
+
+.bio-pub-note {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--outline);
 }
 
 .bio-pub-venue {
