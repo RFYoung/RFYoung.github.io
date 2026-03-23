@@ -26,10 +26,54 @@ description: >-
 
 # Bio section (shown on the home page hero)
 bio_title: "AI Engineer & Researcher"
+bio_position: "AI Engineer"
+bio_affiliation: "Nongxin Technology (Beijing) Co., Ltd."
 bio_description: >-
-  Welcome! I am an AI engineer with research background in reinforcement learning and multi-agent systems.
-  This blog shares insights from my work, research, and explorations in AI.
-  Feel free to reach out if you have questions or suggestions.
+  I am Yusen Yang, an AI engineer at Nongxin Technology (Beijing) Co., Ltd.
+  I hold a Master's degree from the National University of Singapore.
+  My research interests lie in reinforcement learning and multi-agent systems,
+  with publications in venues including IEEE TAI, Information Sciences, and
+  Engineering Applications of Artificial Intelligence. I am passionate about
+  applying AI to real-world problems and building intelligent systems.
+
+interests:
+  - Reinforcement Learning
+  - Multi-Agent Systems
+  - Intelligent Decision Making
+
+education:
+  - degree: "M.Sc. Computer Engineering"
+    institution: "National University of Singapore"
+    years: "2022 — 2024"
+  - degree: "B.S. Computer Science"
+    institution: "Southwest Jiaotong University & University of Leeds"
+    years: "2018 — 2022"
+
+publications:
+  - title: "Intelligent Long-Term Planning with Interaction for Crop Management"
+    authors: "Jingchen Li, <strong>Yusen Yang</strong>, Yuxin Miao, Guoliang Wang, Jingqiu Gu, Huarui Wu"
+    venue: "Engineering Applications of Artificial Intelligence, 2025"
+    pdf: "https://www.sciencedirect.com/science/article/pii/S0952197625015088"
+    doi: "https://doi.org/10.1016/j.engappai.2025.111506"
+    # image: "/assets/images/pub-crop.png"
+  - title: "A Large-Scale UAV Swarm Confrontation Method Based on Fuzzy Reinforcement Learning"
+    authors: "Chunyang Hu, Jingchen Li, <strong>Yusen Yang</strong>, Qiong Gu, Zhao Wu, Bin Ning"
+    venue: "International Journal of Fuzzy Systems, 2025"
+    pdf: "https://link.springer.com/article/10.1007/s40815-024-01903-z"
+    doi: "https://doi.org/10.1007/s40815-024-01903-z"
+    # image: "/assets/images/pub-uav.png"
+  - title: "Investigating Primacy Bias in Multi-Agent Reinforcement Learning: An Empirical Study"
+    authors: "Jingchen Li<sup>*</sup>, <strong>Yusen Yang<sup>*</sup></strong>, Ziming He, Huarui Wu, Chunjiang Zhao, Kao-Shing Hwang <span class='pub-note'>(* equal contribution)</span>"
+    venue: "IEEE Transactions on Artificial Intelligence, 2025"
+    pdf: "https://ieeexplore.ieee.org/document/11173656"
+    doi: "https://doi.org/10.1109/TAI.2025.3560617"
+    # image: "/assets/images/pub-primacy.png"
+  - title: "Cournot Policy Model: Rethinking Centralized Training in Multi-Agent Reinforcement Learning"
+    authors: "Jingchen Li, <strong>Yusen Yang</strong>, Ziming He, Huarui Wu, Haobin Shi, Wenbai Chen"
+    venue: "Information Sciences, 2024"
+    pdf: "https://www.sciencedirect.com/science/article/pii/S0020025524008971"
+    doi: "https://doi.org/10.1016/j.ins.2024.120983"
+    # image: "/assets/images/pub-cournot.png"
 
 # avatar: "/assets/images/avatar.jpg"  # Uncomment and add your photo
 
@@ -41,6 +85,16 @@ leetcode_username: yang_yusen
 # scholar_id: YOUR_GOOGLE_SCHOLAR_ID  # Uncomment and fill in
 # orcid_id: 0000-0000-0000-0000       # Uncomment and fill in
 linkedin_username: yusen-yang-a9617623a
+
+header_pages:
+  - blog.markdown
+  - publications.markdown
+  - contact.markdown
+
+contact_location: "Beijing, China"
+contact_region: "Asia/Shanghai"
+contact_hours: "09:00 - 18:00"
+contact_note: "Open to research discussions, engineering collaboration, and academic exchange."
 
 show_excerpts: true
 
@@ -60,6 +114,7 @@ plugins:
 # their entries' file path in the `include:` list.
 #
 exclude:
+  - stitch_blog_thoughts/
   - .sass-cache/
   - .jekyll-cache/
   - gemfiles/

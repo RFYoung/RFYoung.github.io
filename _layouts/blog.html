@@ -1,0 +1,79 @@
+---
+layout: default
+---
+<article class="post page-article page-shell">
+  <div class="wrapper">
+    <header class="page-hero page-hero-blog">
+      <p class="page-kicker">Technical Writing</p>
+      <h1 class="post-title">Blogs <span class="title-accent">&amp;</span> Thoughts</h1>
+      <p class="page-lead">Technical explorations into reinforcement learning, multi-agent systems, and intelligent decision making.</p>
+    </header>
+
+    <div class="post-content page-panel">
+      {{ content }}
+
+      <div class="blog-layout">
+        <div class="blog-feed">
+          {%- if site.posts.size > 0 -%}
+            {%- for post in site.posts -%}
+            <article class="blog-entry anim-slide-in" style="--delay: {{ forloop.index | times: 0.1 }}s">
+              <div class="blog-entry-meta">
+                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                <span class="blog-entry-date">{{ post.date | date: date_format }}</span>
+                {%- if post.categories.size > 0 -%}
+                <span class="meta-dot"></span>
+                <span class="blog-entry-category">{{ post.categories | first }}</span>
+                {%- endif -%}
+              </div>
+              <h2 class="blog-entry-title">
+                <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+              </h2>
+              {%- if site.show_excerpts -%}
+              <p class="blog-entry-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+              {%- endif -%}
+              {%- if post.categories.size > 0 -%}
+              <div class="blog-entry-tags">
+                {%- for cat in post.categories -%}
+                <span class="chip">{{ cat }}</span>
+                {%- endfor -%}
+              </div>
+              {%- endif -%}
+              <a class="blog-entry-read" href="{{ post.url | relative_url }}">
+                Read Article
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </article>
+            {%- endfor -%}
+          {%- else -%}
+            <p class="no-posts">No posts yet.</p>
+          {%- endif -%}
+        </div>
+
+        <aside class="blog-sidebar">
+          {%- if site.categories.size > 0 -%}
+          <div class="sidebar-block">
+            <h3 class="sidebar-block-title">Categories</h3>
+            <div class="sidebar-category-list">
+              {%- for category in site.categories -%}
+              <div class="sidebar-category-item">
+                <span>{{ category[0] }}</span>
+                <span class="sidebar-category-count">{{ category[1].size | prepend: '00' | slice: -2, 2 }}</span>
+              </div>
+              {%- endfor -%}
+            </div>
+          </div>
+          {%- endif -%}
+
+          <div class="sidebar-block sidebar-block-accent">
+            <h3 class="sidebar-block-title sidebar-block-title-accent">Sync the Feed</h3>
+            <p class="sidebar-block-desc">Receive updates on new posts and research explorations.</p>
+            <a class="btn-subscribe btn-full" href="{{ "/feed.xml" | relative_url }}">
+              <svg class="btn-subscribe-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+              Subscribe via RSS
+            </a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</article>

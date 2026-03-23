@@ -1,16 +1,24 @@
 ---
 layout: default
 ---
-<article class="post page-article">
-
+<article class="post page-article page-shell">
   <div class="wrapper">
-    <header class="post-header">
+    <header class="page-hero{% if page.page_style %} page-hero-{{ page.page_style }}{% endif %}">
+      {%- if page.kicker -%}
+      <p class="page-kicker">{{ page.kicker }}</p>
+      {%- endif -%}
+      {%- if page.display_title -%}
+      <h1 class="post-title">{{ page.display_title }}</h1>
+      {%- else -%}
       <h1 class="post-title">{{ page.title | escape }}</h1>
+      {%- endif -%}
+      {%- if page.lead -%}
+      <p class="page-lead">{{ page.lead }}</p>
+      {%- endif -%}
     </header>
 
-    <div class="post-content">
+    <div class="post-content page-panel">
       {{ content }}
     </div>
   </div>
-
 </article>
