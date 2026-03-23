@@ -3,12 +3,12 @@ layout: bio
 title: About
 permalink: /about/
 position: "AI Engineer"
-affiliation: "Nongxin (Beijing) Technology Co., Ltd."
+affiliation: "Nongxin Technology (Beijing) Co., Ltd."
 ---
 
 ## About Me
 
-I am Yusen Yang, an AI engineer at Nongxin Technoly (Beijing) Technology Co., Ltd. I hold a Master's degree from the National University of Singapore. My research interests lie in reinforcement learning and multi-agent systems, with publications in venues including IEEE TAI, Information Sciences, and Engineering Applications of Artificial Intelligence. I am passionate about applying AI to real-world problems and building intelligent systems.
+I am Yusen Yang, an AI engineer at Nongxin Technology (Beijing) Co., Ltd. I hold a Master's degree from the National University of Singapore. My research interests lie in reinforcement learning and multi-agent systems, with publications in venues including IEEE TAI, Information Sciences, and Engineering Applications of Artificial Intelligence. I am passionate about applying AI to real-world problems and building intelligent systems.
 
 ## Education
 
@@ -87,7 +87,7 @@ I am Yusen Yang, an AI engineer at Nongxin Technoly (Beijing) Technology Co., Lt
 <div class="bio-timeline-date">2024 — Present</div>
 <div class="bio-timeline-body">
 <strong>AI Engineer</strong>
-<br>Nongxin (Beijing) Technology Co., Ltd.
+<br>Nongxin Technology (Beijing) Co., Ltd.
 </div>
 </div>
 </div>
